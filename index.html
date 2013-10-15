@@ -123,7 +123,7 @@ Natalie</textarea>
   <div class="advantage row">
   <div class="small-12 columns" style="padding:.75em;">
     <label for="advantage" >Advantage: </label>
-    <select name="advantage" class="small-2">
+    <select name="advantage" class="small-2 advantage">
       <option value="0">0m</option>
       <option value="1">1m</option>
       <option value="2">2m</option>
@@ -147,9 +147,9 @@ Natalie</textarea>
         <tr class="entry">
           <td style="text-align:center;">&nbsp;&nbsp;</td>
           <td><select class="players"><option></option></select></td>
-          <td><select name="inkast" class="kubbs ten"></select></td>
-          <td><select name="rethrown" class="kubbs ten"></select></td>
-          <td><select name="penalty" class="kubbs ten"></select></td>
+          <td><select name="inkast" class="kubbs ten inkast"></select></td>
+          <td><select name="rethrown" class="kubbs ten rethrown"></select></td>
+          <td><select name="penalty" class="kubbs ten penalty"></select></td>
         </tr>
         <tr class="add"><td colspan=5> <button class="add inkast small button">Add Inkastare</button></td></tr>
       </tbody>
@@ -172,9 +172,9 @@ Natalie</textarea>
         <tr>
           <td style="text-align:center;" class="count">1</td>
           <td><select class="players"><option></option></select></td>
-          <td><select name="field"class="kubbs ten"></select></td>
-          <td><select name="base" class="kubbs five"></select></td>
-          <td><select name="other">
+          <td><select name="field" class="kubbs ten field"></select></td>
+          <td><select name="base" class="kubbs five base"></select></td>
+          <td><select name="other" class="other">
                 <option></option>
                 <option value="e">E</option>
                 <option value="z">Z</option>
@@ -262,6 +262,11 @@ $(document).foundation();
     });
 
     $('button.add.planetkubb').bind('click', function(e){
+      var opening_team = $('input#opening_team').val();
+      var answering_team = $('input#answering_team').val();
+      var gamekey = opening_team + ' vs ' + answering_team + ' ' + $('#description').val();
+
+      gamedata = localStorage.getItem(gamekey);
 
       //$.ajax({
       //  url: "http://wiki.planetkubb.com/w/api.php",
@@ -278,14 +283,13 @@ $(document).foundation();
       pk_setup_teams_and_players();
     });
 
-    $('input').bind('blur', local_save);
+    $('input,select,textarea').bind('blur', local_save);
     $(window).bind('online', pk_save);
 
   });
 
 
   function local_save(){
-
     var opening_team = $('input#opening_team').val();
     var opening_players = $('textarea#opening_players').val().split('\n');
 
@@ -295,91 +299,105 @@ $(document).foundation();
     var gamedata = "{{Game|Team A="+ opening_team +"|Team A Players=" + opening_players.join(',') + "|Team B="+ answering_team +"|Team B Players=" + answering_players.join(',') + "|Winner=Team |Start date=|End date=|Location=|Event="+ $('#description').val() +"|Include stats=Yes|Scored by=" + $('#username').val() + "|Entered by=" + $('#username').val() + "|Created date=}}{{Game initialize}}{{Game statistics}}";
 
     $.each(opening_players, function(){
-      gamedata =+ "{{Game player|Team=" + opening_team + "|Player=" + this + "|Initial=" + this +"}}"
+      gamedata += "{{Game player|Team=" + opening_team + "|Player=" + this + "|Initial=" + this +"}}"
     });
 
     $.each(answering_players, function(){
-      gamedata =+ "{{Game player|Team=" + answering_team + "|Player=" + this + "|Initial=" + this +"}}"
+      gamedata += "{{Game player|Team=" + answering_team + "|Player=" + this + "|Initial=" + this +"}}"
     });
 
-    $.each('#gameplay fieldset.turn', function() {
-      gamedata =+ "{{Game turn";
+    $('#gameplay fieldset.turn').each(function() {
+      gamedata += "{{Game turn";
 
-      $.each(this + ' .inkast.row tr.entry', function(){
-        i=1;
-        gamedata =+ "|Kubb throw "+ i + " player=" + $(this + ' select.players').val() ;
+      $(this).find('.inkast.row tr.entry').each(function(){
+        var i=1;
+        if ( $(this).find('select.players').val() ) {
+          gamedata += "|Kubb throw "+ i + " player=" + $(this).find('select.players').val() ;
+          gamedata += "|Kubb throw "+ i + " =" + $(this).find('select.inkast').val() + "i" ;
 
-        gamedata =+ "|Kubb throw "+ i + " =" + $(this + ' select[name=inkast]').val() + "i" ;
+          if ($(this + 'select.rethrown').val()) {
+            gamedata += "|Kubb throw "+ i + " =" + $(this).find('select.rethrown').val() + "r" ;
+          }
 
-        if ($(this + 'select[name=rethrown]').val()) {
-          gamedata =+ "|Kubb throw "+ i + " =" + $(this + ' select[name=rethrown]').val() + "r" ;
-        }
-
-        if ($(this + 'select[name=penalty]').val()) {
-          gamedata =+ "|Kubb throw "+ i + " =" + $(this + ' select[name=penalty]').val() + "p" ;
+          if ($(this + 'select.penalty').val()) {
+            gamedata += "|Kubb throw "+ i + " =" + $(this).find('select.penalty').val() + "p" ;
+          }
         }
         i++;
-      })
-
-      gamedata =+ "|Advantage line=" + $(this + ' select[name=advantage]').val();
-
-      $.each(this + ' .baton.row tr.entry', function(){
-        gamedata =+ "|Throw " + i + "player=" + $(this + ' select.players').val() ;
-
-        if ($(this + ' select[name=other]').val()) {
-          gamedata =+ "|Throw " + i + "=" + $(this + ' select[name=other]').val();
-        } else {
-          gamedata =+ "|Throw " + i + "=" + $(this + ' select[name=field]').val() + "F";
-          gamedata =+ "|Throw " + i + "=" + $(this + ' select[name=base]').val() + "B";
-        }
-
       });
 
-    });
-
-      var gamekey = opening_team + ' vs ' + answering_team + ' ' + $('#description').val();
-
-      console.log('izgot localStorage');
-      localStorage.setItem(gamekey, gamedata);
-      console.log(localStorage.getItem(gamekey));
-    }
-
-    //
-    function pk_save(){
-      if (navigator.onLine) {
-        $('button.add.planetkubb'),show();
+      if ( $(this).find('select.advantage').val() != "0" ) {
+        gamedata += "|Advantage line=" + $(this).find('select.advantage').val();
       }
-    }
 
-    // Set up Teams and Players
-    function pk_setup_teams_and_players(){
-      var opening_team = $('input#opening_team').val();
-      $('th#opening_team').text(opening_team);
-      var opening_players = $('textarea#opening_players').val().split('\n');
 
-      var answering_team = $('input#answering_team').val();
-      $('th#answering_team').text(answering_team);
-      var answering_players = $('textarea#answering_players').val().split('\n');
+      $(this).find('.baton.row tr.entry').each(function(){
+        var i=1;
 
-      $('.players').find('option').remove().end();
-      $('.players').find('optgroup').remove().end();
+        if ( $(this).find('select.players').val() ) {
+          gamedata += "|Throw " + i + "player=" + $(this).find('select.players').val() ;
+          gamedata += "|Throw " + i + "=";
 
-      $('.players').append('<option value=""></option>');
-      $('.players').append('<optgroup label="' + opening_team + '">');
-      $.each(opening_players, function(){
-        $('.players').append('<option value="' + this + '">' + this + '</option>');
+          if ($(this + ' select.other').val()) {
+           gamedata += $(this).find('select.other').val();
+          } else {
+            if ($(this).find('select.field').val() || $(this).find('select.base').val() ) {
+              gamedata += $(this).find('select.field').val() + "F";
+              gamedata += $(this).find('select.base').val() + "B";
+            } else {
+              gamedata += "-";
+            }
+          }
+        }
+        i++;
       });
-      $('.players').append('</optgroup>');
-      $('.players').append('<optgroup label="' + answering_team + '">');
-      $.each(answering_players, function(){
-        $('.players').append('<option value="' + this + '">' + this + '</option>');
-      });
-      $('.players').append('</optgroup>');
-    }
 
-    $(function() {
-      FastClick.attach(document.body);
+      gamedata += "}}";
+
     });
+
+    var gamekey = opening_team + ' vs ' + answering_team + ' ' + $('#description').val();
+    localStorage.removeItem(gamekey);
+    localStorage.setItem(gamekey, gamedata);
+    console.log(localStorage.getItem(gamekey));
+  }
+
+
+  function pk_save(){
+    if (navigator.onLine) {
+      $('button.add.planetkubb'),show();
+    }
+  }
+
+  // Set up Teams and Players
+  function pk_setup_teams_and_players(){
+    var opening_team = $('input#opening_team').val();
+    $('th#opening_team').text(opening_team);
+    var opening_players = $('textarea#opening_players').val().split('\n');
+
+    var answering_team = $('input#answering_team').val();
+    $('th#answering_team').text(answering_team);
+    var answering_players = $('textarea#answering_players').val().split('\n');
+
+    $('.players').find('option').remove().end();
+    $('.players').find('optgroup').remove().end();
+
+    $('.players').append('<option value=""></option>');
+    $('.players').append('<optgroup label="' + opening_team + '">');
+    $.each(opening_players, function(){
+      $('.players').append('<option value="' + this + '">' + this + '</option>');
+    });
+    $('.players').append('</optgroup>');
+    $('.players').append('<optgroup label="' + answering_team + '">');
+    $.each(answering_players, function(){
+      $('.players').append('<option value="' + this + '">' + this + '</option>');
+    });
+    $('.players').append('</optgroup>');
+  }
+
+  $(function() {
+    FastClick.attach(document.body);
+  });
 
 </script>
 </body>
