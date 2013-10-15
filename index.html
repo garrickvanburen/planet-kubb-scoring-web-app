@@ -226,7 +226,7 @@ $(document).foundation();
 
     // Set up the batons throws in the main template
     for (var i = 1; i < 6; i++) {
-      $('#templates .baton tbody tr:first').clone().appendTo('#templates .baton tbody');
+      $('#templates .baton tbody tr:first').clone().appendTo('#templates .baton tbody').addClass('baton-' + i.toString());
     }
 
     i = 1;
@@ -278,58 +278,70 @@ $(document).foundation();
       pk_setup_teams_and_players();
     });
 
-    $('input').bind('blur', 'local_save');
-    $(window).bind('online', 'pk_save');
+    $('input').bind('blur', local_save);
+    $(window).bind('online', pk_save);
 
   });
-    function local_save(){
-      // var setupdata = "{{Game
-      // |Team A=
-      // |Team A Players=
-      // |Team B=
-      // |Team B Players=
-      // |Winner=Team B
-      // |Start date=
-      // |End date=
-      // |Location=
-      // |Event=
-      // |Include stats=Yes
-      // |Scored by=
-      // |Entered by=
-      // |Created date=
-      // }}
-      // {{Game initialize}}
-      // {{Game statistics}}
-      // ";
 
-      // var playerdata = "{{Game player
-      // |Team=
-      // |Player=
-      // |Initial=
-      // }}"
 
-      // var gameturn_data = "{{Game turn
-      // |Kubb throw 1 player=
-      // |Kubb throw 1=
-      // |Advantage line=
-      // |Throw 1 player=
-      // |Throw 1=
-      // |Throw 2 player=
-      // |Throw 2=
-      // |Throw 3 player=
-      // |Throw 3=
-      // |Throw 4 player=
-      // |Throw 4=
-      // |Throw 5 player=
-      // |Throw 5=
-      // |Throw 6 player=
-      // |Throw 6=
-      // }}"
-      var = gamekey = $('input#opening_team').val() + ' vs ' + $('input#answering_team').val() + ' ' + $('#game_description').val();
-      var gamedata = ""; //setupdata + playerdata + gameturn_data;
-      if ( $.support.localStorage ) {
-        localStorage.setItem(gamekey, gamedata);
-      }
+  function local_save(){
+
+    var opening_team = $('input#opening_team').val();
+    var opening_players = $('textarea#opening_players').val().split('\n');
+
+    var answering_team = $('input#answering_team').val();
+    var answering_players = $('textarea#answering_players').val().split('\n');
+
+    var gamedata = "{{Game|Team A="+ opening_team +"|Team A Players=" + opening_players.join(',') + "|Team B="+ answering_team +"|Team B Players=" + answering_players.join(',') + "|Winner=Team |Start date=|End date=|Location=|Event="+ $('#description').val() +"|Include stats=Yes|Scored by=" + $('#username').val() + "|Entered by=" + $('#username').val() + "|Created date=}}{{Game initialize}}{{Game statistics}}";
+
+    $.each(opening_players, function(){
+      gamedata =+ "{{Game player|Team=" + opening_team + "|Player=" + this + "|Initial=" + this +"}}"
+    });
+
+    $.each(answering_players, function(){
+      gamedata =+ "{{Game player|Team=" + answering_team + "|Player=" + this + "|Initial=" + this +"}}"
+    });
+
+    $.each('#gameplay fieldset.turn', function() {
+      gamedata =+ "{{Game turn";
+
+      $.each(this + ' .inkast.row tr.entry', function(){
+        i=1;
+        gamedata =+ "|Kubb throw "+ i + " player=" + $(this + ' select.players').val() ;
+
+        gamedata =+ "|Kubb throw "+ i + " =" + $(this + ' select[name=inkast]').val() + "i" ;
+
+        if ($(this + 'select[name=rethrown]').val()) {
+          gamedata =+ "|Kubb throw "+ i + " =" + $(this + ' select[name=rethrown]').val() + "r" ;
+        }
+
+        if ($(this + 'select[name=penalty]').val()) {
+          gamedata =+ "|Kubb throw "+ i + " =" + $(this + ' select[name=penalty]').val() + "p" ;
+        }
+        i++;
+      })
+
+      gamedata =+ "|Advantage line=" + $(this + ' select[name=advantage]').val();
+
+      $.each(this + ' .baton.row tr.entry', function(){
+        gamedata =+ "|Throw " + i + "player=" + $(this + ' select.players').val() ;
+
+        if ($(this + ' select[name=other]').val()) {
+          gamedata =+ "|Throw " + i + "=" + $(this + ' select[name=other]').val();
+        } else {
+          gamedata =+ "|Throw " + i + "=" + $(this + ' select[name=field]').val() + "F";
+          gamedata =+ "|Throw " + i + "=" + $(this + ' select[name=base]').val() + "B";
+        }
+
+      });
+
+    });
+
+      var gamekey = opening_team + ' vs ' + answering_team + ' ' + $('#description').val();
+
+      console.log('izgot localStorage');
+      localStorage.setItem(gamekey, gamedata);
+      console.log(localStorage.getItem(gamekey));
     }
 
     //
