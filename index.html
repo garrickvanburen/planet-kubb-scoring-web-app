@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" manifest="manifest.appcache" > <!--<![endif]-->
+<head>
+  <title>Planet Kubb Game </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/planetkubb.css">
+
+
+</head>
+<body>
+
+<div class="row">
+
+<div id="masthead">
+  <img src="img/planetkubb-logo.png" />
+  SCORESHEET
+</div>
+
+<form>
+
+    <div class="section-container accordion" data-section="accordion">
+      <section class="active">
+        <p class="title" data-section-title><a href="#panel1">Game Setup</a></p>
+        <div class="content" data-section-content>
+
+
+<label for="description">Game Description</label>
+<input type="text" name="description" id="description" value="" placeholder="Game Description" />
+
+
+            <fieldset class="team">
+              <legend>Team</legend>
+              <label for="opening_team">Name</label>
+              <input type="text" name="opening_team" id="opening_team" placeholder="Witty Kubbduct"  value="Witty Kubbduct" />
+              <label for="opening_players">Roster</label>
+              <textarea class="roster"  id="opening_players">
+Lars
+Anita</textarea>
+</fieldset>
+
+            <fieldset class="team">
+              <legend>Team</legend>
+              <label for="answering_team">Name</label>
+            <input type="text" name="answering_team" id="answering_team" placeholder="Kubbricator" value="Kubbricator" />
+              <label for="answering_players">Roster</label>
+            <textarea class="roster" id="answering_players">
+Jim
+Natalie</textarea>
+</fieldset>
+
+          </fieldset>
+
+          <fieldset>
+              <legend>Your Planet Kubb Credentials</legend>
+              <label for="username">Name</label>
+              <input type="text" value="" name="username" placeholder="wiki.planetkubb.com username" />
+
+              <label for="password">Password</label>
+              <input type="password" value="" name="password"/>
+
+          </fieldset>
+        </div>
+      </section>
+
+      <section class="section" id="gameplay">
+      <p class="title" data-section-title><a href="#panel2">Gameplay</a></p>
+      <div class="content" data-section-content>
+      <button class="add turn small button success">Add Turn</button>
+      <button class="add planetkubb small button alert" style="display:none;">Send Game to Planet Kubb</button>
+      </div>
+
+    </section>
+
+    <section class="section" id="stats">
+      <p class="title" data-section-title><a href="#panel3">Stats</a></p>
+      <div class="content" data-section-content>
+        <div class="stats row" style="text-align:center;">
+          <table class="columns">
+            <thead>
+              <tr>
+                <th></th>
+                <th id="opening_team">Team 1</th>
+                <th id="answering_team">Team 2</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th class="small-3">Eff:</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="small-3">Hit %:</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="small-3">0 Base @ T#:</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th class="small-3">Total F @ T1</th>
+              <td></td>
+              <td></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</form>
+</div>
+<div id="templates">
+<fieldset class="turn">
+  <legend>Turn 0</legend>
+  <div class="advantage row">
+  <div class="small-12 columns" style="padding:.75em;">
+    <label for="advantage" >Advantage: </label>
+    <select name="advantage" class="small-2">
+      <option value="0">0m</option>
+      <option value="1">1m</option>
+      <option value="2">2m</option>
+      <option value="3">3m</option>
+      <option value="4">4m</option>
+    </select>
+  </div>
+  </div>
+  <div class="inkast row">
+    <table class="small-12 columns">
+      <thead>
+        <tr>
+          <td colspan=2>Inkast</td>
+          <td>I</td>
+          <td>R</td>
+          <td>P</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="entry">
+          <td style="text-align:center;">&nbsp;&nbsp;</td>
+          <td><select class="players"><option></option></select></td>
+          <td><select name="inkast" class="kubbs ten"></select></td>
+          <td><select name="rethrown" class="kubbs ten"></select></td>
+          <td><select name="penalty" class="kubbs ten"></select></td>
+        </tr>
+        <tr class="add"><td colspan=5> <button class="add inkast small button">Add Inkastare</button></td></tr>
+      </tbody>
+    </table>
+
+
+  </div>
+
+  <div class="baton row">
+    <table class="small-12 columns">
+      <thead>
+        <tr>
+          <td colspan="2">Baton</td>
+          <td>F</td>
+          <td>B</td>
+          <td>!</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align:center;" class="count">1</td>
+          <td><select class="players"><option></option></select></td>
+          <td><select name="field"class="kubbs ten"></select></td>
+          <td><select name="base" class="kubbs five"></select></td>
+          <td><select name="other">
+                <option></option>
+                <option value="e">E</option>
+                <option value="z">Z</option>
+                <option value="k">K</option>
+                <option value="=">=</option>
+              </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    </div>
+
+  </div>
+  </fieldset>
+</div>
+<script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.alerts.js"></script>
+  <script src="js/foundation/foundation.clearing.js"></script>
+  <script src="js/foundation/foundation.cookie.js"></script>
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  <script src="js/foundation/foundation.forms.js"></script>
+  <script src="js/foundation/foundation.section.js"></script>
+  <script src='js/vendor/fastclick.js'></script>
+
+  <script>
+$(document).foundation();
+
+ $(document).ready(function() {
+    window.addEventListener('load', function() {
+      FastClick.attach(document.body);
+    }, false);
+
+    // Set up 5 baseline kubbs
+    for (var i = 0; i < 3; i++) {
+      $('.kubbs.five').append('<option value="' + i + '">' + i + '</option>');
+    }
+
+    // Set up 10 field kubbs
+    for (var i = 0; i < 11; i++) {
+      $('.kubbs.ten').append('<option value="' + i + '">' + i + '</option>');
+    }
+
+    // Set up the batons throws in the main template
+    for (var i = 1; i < 6; i++) {
+      $('#templates .baton tbody tr:first').clone().appendTo('#templates .baton tbody');
+    }
+
+    i = 1;
+    $('#templates .baton tbody tr td.count').each(function(){
+       $(this).text(i); i++;
+    });
+
+    pk_setup_teams_and_players();
+
+    // Set up the opening turns
+    for (var i = 1; i < 4; i++) {
+      $('#templates fieldset.turn').clone().insertBefore('#gameplay .content button.add.turn');
+      $('#gameplay .content fieldset.turn legend:last').text('Turn ' + i);
+    }
+
+    $('#gameplay .content fieldset.turn:first').addClass('opening');
+    $('.opening .advantage').hide();
+    $('.opening .inkast').hide();
+    $('.opening .kubbs.ten').hide();
+    $('#gameplay .content fieldset.turn button:last').show();
+
+    $('button.add.turn').bind('click', function(e){
+      $('#gameplay button.add.inkast').hide();
+      var turn = $('#templates fieldset.turn').clone().insertBefore($(this));
+      $('#gameplay fieldset.turn legend:last').text('Turn ' + $('#gameplay .content fieldset.turn').length);
+      e.preventDefault();
+    });
+
+    $('button.add.inkast').bind('click', function(e){
+      var inkast = $('#templates .inkast.row tbody tr.entry');
+      inkast.clone().insertBefore($(this).parent().parent());
+      e.preventDefault();
+    });
+
+    $('button.add.planetkubb').bind('click', function(e){
+
+      //$.ajax({
+      //  url: "http://wiki.planetkubb.com/w/api.php",
+      //  type: 'post',
+      //  data: gamedata,
+      //  success:
+      //  error:
+      //});
+
+      e.preventDefault();
+    });
+
+    $('fieldset.team input,fieldset.team textarea').bind('change', function(){
+      pk_setup_teams_and_players();
+    });
+
+    $('input').bind('blur', 'local_save');
+    $(window).bind('online', 'pk_save');
+
+  });
+    function local_save(){
+      // var setupdata = "{{Game
+      // |Team A=
+      // |Team A Players=
+      // |Team B=
+      // |Team B Players=
+      // |Winner=Team B
+      // |Start date=
+      // |End date=
+      // |Location=
+      // |Event=
+      // |Include stats=Yes
+      // |Scored by=
+      // |Entered by=
+      // |Created date=
+      // }}
+      // {{Game initialize}}
+      // {{Game statistics}}
+      // ";
+
+      // var playerdata = "{{Game player
+      // |Team=
+      // |Player=
+      // |Initial=
+      // }}"
+
+      // var gameturn_data = "{{Game turn
+      // |Kubb throw 1 player=
+      // |Kubb throw 1=
+      // |Advantage line=
+      // |Throw 1 player=
+      // |Throw 1=
+      // |Throw 2 player=
+      // |Throw 2=
+      // |Throw 3 player=
+      // |Throw 3=
+      // |Throw 4 player=
+      // |Throw 4=
+      // |Throw 5 player=
+      // |Throw 5=
+      // |Throw 6 player=
+      // |Throw 6=
+      // }}"
+      var = gamekey = $('input#opening_team').val() + ' vs ' + $('input#answering_team').val() + ' ' + $('#game_description').val();
+      var gamedata = ""; //setupdata + playerdata + gameturn_data;
+      if ( $.support.localStorage ) {
+        localStorage.setItem(gamekey, gamedata);
+      }
+    }
+
+    //
+    function pk_save(){
+      if (navigator.onLine) {
+        $('button.add.planetkubb'),show();
+      }
+    }
+
+    // Set up Teams and Players
+    function pk_setup_teams_and_players(){
+      var opening_team = $('input#opening_team').val();
+      $('th#opening_team').text(opening_team);
+      var opening_players = $('textarea#opening_players').val().split('\n');
+
+      var answering_team = $('input#answering_team').val();
+      $('th#answering_team').text(answering_team);
+      var answering_players = $('textarea#answering_players').val().split('\n');
+
+      $('.players').find('option').remove().end();
+      $('.players').find('optgroup').remove().end();
+
+      $('.players').append('<option value=""></option>');
+      $('.players').append('<optgroup label="' + opening_team + '">');
+      $.each(opening_players, function(){
+        $('.players').append('<option value="' + this + '">' + this + '</option>');
+      });
+      $('.players').append('</optgroup>');
+      $('.players').append('<optgroup label="' + answering_team + '">');
+      $.each(answering_players, function(){
+        $('.players').append('<option value="' + this + '">' + this + '</option>');
+      });
+      $('.players').append('</optgroup>');
+    }
+
+    $(function() {
+      FastClick.attach(document.body);
+    });
+
+</script>
+</body>
+</html>

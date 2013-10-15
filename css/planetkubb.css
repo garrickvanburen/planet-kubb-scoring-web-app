@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Montserrat PK';
+  font-style:normal;
+  font-weight:normal;
+  src: url('fonts/Montserrat-PK/MontserratPK-Regular.eot?#') format('eot'), url('fonts/Montserrat-PK/MontserratPK-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat PK';
+  font-style:normal;
+  font-weight:bold;
+  src: url('fonts/Montserrat-PK/MontserratPK-Bold.eot?#') format('eot'), url('fonts/Montserrat-PK/MontserratPK-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style:normal;
+  font-weight:normal;
+  src: url('fonts/Muli/Muli-Regular.eot?#') format('eot'), url('fonts/Muli/Muli-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style:italic;
+  font-weight:normal;
+  src: url('fonts/Muli/Muli-Italic.eot?#') format('eot'), url('fonts/Muli/Muli-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style:normal;
+  font-weight:200;
+  src: url('fonts/Muli/Muli-Light.eot?#') format('eot'), url('fonts/Muli/Muli-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Muli';
+  font-style:italic;
+  font-weight:200;
+  src: url('fonts/Muli/Muli-LightItalic.eot?#') format('eot'), url('fonts/Muli/Muli-LightItalic.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Muli', Arial, sans-serif;
+  color: #042C20;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat PK';
+}
+
+em,i,cite{
+  font-family: 'Muli';
+  font-style: italic;
+}
+
+textarea#opening_players,
+textarea#answering_players {
+  height: 8.5em;
+}
+
+table thead tr td {
+  text-align: center;
+}
+
+div#templates { display: none;}
+
+
+select {
+  font-size: 0.875em;
+  margin: 0 0 0 0;
+  padding: 0.5em;
+  height: 2.3125em;
+  width: 100%;
+}
+
+table.columns {
+  padding: 0;
+}
+
+button.add.planetkubb {
+  float:right;
+}
+
+.advantage label { display:inline-block;}
+
+tr.add td { background-color: white; }
+
+button, .button {
+  text-transform: capitalize;
+}
+
+#stats tbody th {text-align:right;}
+#stats thead th {text-align:center;}
+
+#masthead img {
+  height: 80px;
+  width: auto;
+  padding: 0.5em;
+}
+
+#masthead {
+  font-family: 'Montserrat PK', Arial, sans-serif;
+  font-size: 1.85em;
+  padding: 0;
+  color: #042C20;
+  text-transform: capitalize;
+}
+
+.no-js .section-container > section > .title a, .no-js .section-container > .section > p.title a {
+  font-family: 'Montserrat PK', Arial, sans-serif;
+  font-size: 1.25em;
+  padding: 0.5em;
+  color: #042C20;
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 480px) {
+  #masthead {
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+}
