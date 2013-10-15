@@ -8,8 +8,6 @@
 
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/planetkubb.css">
-
-
 </head>
 <body>
 
@@ -68,9 +66,22 @@ Natalie</textarea>
 
       <section class="section" id="gameplay">
       <p class="title" data-section-title><a href="#panel2">Gameplay</a></p>
-      <div class="content" data-section-content>
-      <button class="add turn small button success">Add Turn</button>
-      <button class="add planetkubb small button alert" style="display:none;">Send Game to Planet Kubb</button>
+      <div class="content row" data-section-content>
+
+
+      <button class="add turn small button success small-2 columns">Add Turn</button>
+
+      <div class="small-4 columns">
+      <label for="winner" style="display:inline-block;">Winner</label>
+      <select id="winner" style="width:80%;">
+        <optgroup label="Select Winning Team"></optgroup>
+      </select>
+      </div>
+
+      <button class="add planetkubb small button alert small-4 columns" style="display:none;">Send Game to Planet Kubb</button>
+
+      <div class="clear_both"></div>
+
       </div>
 
     </section>
@@ -296,7 +307,7 @@ $(document).foundation();
     var answering_team = $('input#answering_team').val();
     var answering_players = $('textarea#answering_players').val().split('\n');
 
-    var gamedata = "{{Game|Team A="+ opening_team +"|Team A Players=" + opening_players.join(',') + "|Team B="+ answering_team +"|Team B Players=" + answering_players.join(',') + "|Winner=Team |Start date=|End date=|Location=|Event="+ $('#description').val() +"|Include stats=Yes|Scored by=" + $('#username').val() + "|Entered by=" + $('#username').val() + "|Created date=}}{{Game initialize}}{{Game statistics}}";
+    var gamedata = "{{Game|Team A="+ opening_team +"|Team A Players=" + opening_players.join(',') + "|Team B="+ answering_team +"|Team B Players=" + answering_players.join(',') + "|Winner=Team " + $('select#winner').val() + "|Start date=|End date=|Location=|Event="+ $('#description').val() +"|Include stats=Yes|Scored by=" + $('#username').val() + "|Entered by=" + $('#username').val() + "|Created date=}}{{Game initialize}}{{Game statistics}}";
 
     $.each(opening_players, function(){
       gamedata += "{{Game player|Team=" + opening_team + "|Player=" + this + "|Initial=" + this +"}}"
@@ -393,6 +404,8 @@ $(document).foundation();
       $('.players').append('<option value="' + this + '">' + this + '</option>');
     });
     $('.players').append('</optgroup>');
+
+    $('select#winner').append("<option value='A'>" + opening_team + "</option><option value='B'>" + answering_team + "</option>");
   }
 
   $(function() {
