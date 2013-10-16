@@ -284,13 +284,18 @@ $(document).ready(function() {
 
       gamedata = localStorage.getItem(gamekey);
 
-      //$.ajax({
-      //  url: "http://wiki.planetkubb.com/w/api.php",
-      //  type: 'post',
-      //  data: gamedata,
-      //  success:
-      //  error:
-      //});
+      $.ajax({
+        url: "http://wiki.planetkubb.com/w/api.php",
+        username:$('#username').val(),
+        password:$('#password').val(),
+        type: 'POST',
+        xhrFields: { withCredentials: true },
+        data: gamedata,
+        dataType:'text',
+        success: function(){
+          alert('Game Saved to Planet Kubb');
+        }
+      });
 
       e.preventDefault();
     });
