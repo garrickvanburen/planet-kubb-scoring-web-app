@@ -26,10 +26,6 @@
         <div class="content" data-section-content>
 
 
-<label for="description">Game Description</label>
-<input type="text" name="description" id="description" value="" placeholder="Game Description" />
-
-
             <fieldset class="team">
               <legend>Team</legend>
               <label for="opening_team">Name</label>
@@ -52,6 +48,13 @@ Natalie</textarea>
 
           </fieldset>
 
+<label for="description">Game Description</label>
+<input type="text" name="description" id="description" value="" placeholder="Game Description" />
+
+<label for="description">Game Location</label>
+<input type="text" name="location" id="location" value="" placeholder="Game Location" />
+
+
           <fieldset>
               <legend>Your Planet Kubb Credentials</legend>
               <label for="username">Name</label>
@@ -66,21 +69,21 @@ Natalie</textarea>
 
       <section class="section" id="gameplay">
       <p class="title" data-section-title><a href="#panel2">Gameplay</a></p>
-      <div class="content row" data-section-content>
+      <div class="content" data-section-content>
 
+      <div class="row" style="padding:1em;">
+        <button class="add turn small button success small-2 columns">Add Turn</button>
 
-      <button class="add turn small button success small-2 columns">Add Turn</button>
+        <div class="small-4 columns small-offset-6">
+          <select id="winner">
+            <option>- Select Winning Team -</option>
+          </select>
 
-      <div class="small-4 columns">
-      <label for="winner" style="display:inline-block;">Winner</label>
-      <select id="winner" style="width:80%;">
-        <optgroup label="Select Winning Team"></optgroup>
-      </select>
+          <button style="margin-top:1em;width:100%;display:none;" class="add planetkubb small button alert">Send Game to Planet Kubb</button>
+        </div>
+
+        <div class="clear_both"></div>
       </div>
-
-      <button class="add planetkubb small button alert small-4 columns" style="display:none;">Send Game to Planet Kubb</button>
-
-      <div class="clear_both"></div>
 
       </div>
 
@@ -220,7 +223,8 @@ Natalie</textarea>
   <script>
 $(document).foundation();
 
- $(document).ready(function() {
+$(document).ready(function() {
+
     window.addEventListener('load', function() {
       FastClick.attach(document.body);
     }, false);
@@ -246,6 +250,7 @@ $(document).foundation();
     });
 
     pk_setup_teams_and_players();
+    pk_get_location();
 
     // Set up the opening turns
     for (var i = 1; i < 4; i++) {
@@ -295,19 +300,23 @@ $(document).foundation();
     });
 
     $('input,select,textarea').bind('blur', local_save);
-    $(window).bind('online', pk_save);
 
+    $('select#winner').change(function(){
+      $('button.add.planetkubb').show();
+    });
   });
 
 
   function local_save(){
+    var current_date = new Date().toJSON().slice(0,10).split('-').join('/');
+
     var opening_team = $('input#opening_team').val();
     var opening_players = $('textarea#opening_players').val().split('\n');
 
     var answering_team = $('input#answering_team').val();
     var answering_players = $('textarea#answering_players').val().split('\n');
 
-    var gamedata = "{{Game|Team A="+ opening_team +"|Team A Players=" + opening_players.join(',') + "|Team B="+ answering_team +"|Team B Players=" + answering_players.join(',') + "|Winner=Team " + $('select#winner').val() + "|Start date=|End date=|Location=|Event="+ $('#description').val() +"|Include stats=Yes|Scored by=" + $('#username').val() + "|Entered by=" + $('#username').val() + "|Created date=}}{{Game initialize}}{{Game statistics}}";
+    var gamedata = "{{Game|Team A="+ opening_team +"|Team A Players=" + opening_players.join(',') + "|Team B="+ answering_team +"|Team B Players=" + answering_players.join(',') + "|Winner=Team " + $('select#winner').val() + "|Start date=" + current_date + "|End date=" + current_date + "|Location="+ $('#location').val() +"|Event="+ $('#description').val() +"|Include stats=Yes|Scored by=" + $('#username').val() + "|Entered by=" + $('#username').val() + "|Created date="+ current_date + "}}{{Game initialize}}{{Game statistics}}";
 
     $.each(opening_players, function(){
       gamedata += "{{Game player|Team=" + opening_team + "|Player=" + this + "|Initial=" + this +"}}"
@@ -320,26 +329,26 @@ $(document).foundation();
     $('#gameplay fieldset.turn').each(function() {
       gamedata += "{{Game turn";
 
+      if ( $(this).find('select.advantage').val() != "0" ) {
+        gamedata += "|Advantage line=" + $(this).find('select.advantage').val();
+      }
+
       $(this).find('.inkast.row tr.entry').each(function(){
         var i=1;
         if ( $(this).find('select.players').val() ) {
           gamedata += "|Kubb throw "+ i + " player=" + $(this).find('select.players').val() ;
-          gamedata += "|Kubb throw "+ i + " =" + $(this).find('select.inkast').val() + "i" ;
+          gamedata += "|Kubb throw "+ i + "=" + $(this).find('select.inkast').val() + "i" ;
 
-          if ($(this + 'select.rethrown').val()) {
-            gamedata += "|Kubb throw "+ i + " =" + $(this).find('select.rethrown').val() + "r" ;
+          if ($(this).find('select.rethrown').val() != "0") {
+            gamedata += $(this).find('select.rethrown').val() + "r" ;
           }
 
-          if ($(this + 'select.penalty').val()) {
-            gamedata += "|Kubb throw "+ i + " =" + $(this).find('select.penalty').val() + "p" ;
+          if ($(this).find('select.penalty').val() != "0") {
+            gamedata += $(this).find('select.penalty').val() + "p" ;
           }
         }
         i++;
       });
-
-      if ( $(this).find('select.advantage').val() != "0" ) {
-        gamedata += "|Advantage line=" + $(this).find('select.advantage').val();
-      }
 
 
       $(this).find('.baton.row tr.entry').each(function(){
@@ -349,10 +358,10 @@ $(document).foundation();
           gamedata += "|Throw " + i + "player=" + $(this).find('select.players').val() ;
           gamedata += "|Throw " + i + "=";
 
-          if ($(this + ' select.other').val()) {
+          if ($(this).find('select.other').val()) {
            gamedata += $(this).find('select.other').val();
           } else {
-            if ($(this).find('select.field').val() || $(this).find('select.base').val() ) {
+            if ($(this).find('select.field').val() != "0" || $(this).find('select.base').val() != "0") {
               gamedata += $(this).find('select.field').val() + "F";
               gamedata += $(this).find('select.base').val() + "B";
             } else {
@@ -373,12 +382,6 @@ $(document).foundation();
     console.log(localStorage.getItem(gamekey));
   }
 
-
-  function pk_save(){
-    if (navigator.onLine) {
-      $('button.add.planetkubb'),show();
-    }
-  }
 
   // Set up Teams and Players
   function pk_setup_teams_and_players(){
@@ -411,6 +414,14 @@ $(document).foundation();
   $(function() {
     FastClick.attach(document.body);
   });
+
+  function pk_get_location(){
+    navigator.geolocation.getCurrentPosition(pk_set_location);
+  }
+
+  function pk_set_location(position){
+    $('#location').val(position.coords.latitude + "," + position.coords.longitude);
+  }
 
 </script>
 </body>

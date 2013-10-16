@@ -115,6 +115,8 @@ button, .button {
   text-transform: capitalize;
 }
 
+form .row .row table.columns { padding: 0;}
+
 @media only screen and (max-width: 480px) {
   #masthead {
     text-align: center;
