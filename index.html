@@ -18,7 +18,7 @@
   SCORESHEET
 </div>
 
-<form>
+<form method="post" action="http://wiki.planetkubb.com/w/api.php?output=json&action=edit&token=&namespace=Game">
 
     <div class="section-container accordion" data-section="accordion">
       <section class="active">
@@ -283,6 +283,7 @@ $(document).ready(function() {
       var gamekey = opening_team + ' vs ' + answering_team + ' ' + $('#description').val();
 
       gamedata = localStorage.getItem(gamekey);
+      $('form').submit();
 
       $.ajax({
         url: "http://wiki.planetkubb.com/w/api.php",
