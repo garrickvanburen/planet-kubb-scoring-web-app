@@ -67,7 +67,7 @@ helpers do
   alias_method :h, :escape_html
 
   def send_to_wiki(params)
-    mw = MediaWiki::Gateway.new('http://wiki.planetkubb.com/w/api.php')
+    mw = MediaWiki::Gateway.new(params[:url] + '/w/api.php')
     mw.login(params[:user], params[:pass])
     return mw.create(params[:page_title], params[:page_content], :summary => 'hello world')
   end
