@@ -1,80 +1,54 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en" manifest="manifest.appcache" > <!--<![endif]-->
-<head>
-  <title>Planet Kubb Game </title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+<form data-abide id="game" method="post" action="/">
 
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/planetkubb.css">
-</head>
-<body>
-
-<div class="row">
-
-<div id="masthead">
-  <img src="img/planetkubb-logo.png" />
-  SCORESHEET
-</div>
-
-
-<form method="post" id="signin">
-
-          <fieldset>
+<dl class="accordion" data-accordion>
+  <dd>
+    <a href="#panel1">Game Setup</a>
+    <div id="panel1" class="content active">
+       <fieldset class="team">
               <legend>Your Planet Kubb Credentials</legend>
-              <label for="username">Name</label>
-              <input type="text" value="garrickvanburen" name="lgname" id="lgname" placeholder="wiki.planetkubb.com username" />
+              <label for="username">Name <small>required</small>
+              <input type="text" value="" name="user" id="user" placeholder="wiki.planetkubb.com username" required pattern="[a-zA-Z]+"/>
+              </label>
 
-              <label for="password">Password</label>
-              <input type="password" value="nets700\team" name="lgpassword" id="lgpassword" />
-              <input type="submit" class="button" value="Sign into Planet Kubb" />
+              <label for="password">Password <small>required</small>
+              <input type="password" value="" name="pass" id="pass" />
+              </label>
           </fieldset>
-</form>
-
-<form id="game" method="post" style="" action="http://wiki.planetkubb.com/w/api.php?output=json&action=edit&token=&namespace=Game">
-
-    <div class="section-container accordion" data-section="accordion">
-      <section class="active">
-        <p class="title" data-section-title><a href="#panel1">Game Setup</a></p>
-        <div class="content" data-section-content>
-
 
             <fieldset class="team">
               <legend>Team</legend>
-              <label for="opening_team">Name</label>
+              <label for="opening_team">Name
               <input type="text" name="opening_team" id="opening_team" placeholder="Witty Kubbduct"  value="Witty Kubbduct" />
-              <label for="opening_players">Roster</label>
-              <textarea class="roster"  id="opening_players">
+              </label>
+              <label for="opening_players">Roster
+              <textarea class="roster" id="opening_players">
 Lars
-Anita</textarea>
+Anita</textarea></label>
 </fieldset>
 
             <fieldset class="team">
               <legend>Team</legend>
               <label for="answering_team">Name</label>
             <input type="text" name="answering_team" id="answering_team" placeholder="Kubbricator" value="Kubbricator" />
-              <label for="answering_players">Roster</label>
+              <label for="answering_players">Roster
             <textarea class="roster" id="answering_players">
 Jim
-Natalie</textarea>
+Natalie</textarea></label>
 </fieldset>
 
-          </fieldset>
 
-<label for="description">Game Description</label>
-<input type="text" name="description" id="description" value="" placeholder="Game Description" />
+<label for="description">Game Description
+<input type="text" name="description" id="description" value="" placeholder="Game Description" /></label>
 
-<label for="description">Game Location</label>
-<input type="text" name="location" id="location" value="" placeholder="Game Location" />
-        </div>
-      </section>
+<label for="description">Game Location
+<input type="text" name="location" id="location" value="" placeholder="Game Location" /></label>
+    </div>
+  </dd>
 
-      <section class="section" id="gameplay">
-      <p class="title" data-section-title><a href="#panel2">Gameplay</a></p>
-      <div class="content" data-section-content>
-
-      <div class="row" style="padding:1em;">
+  <dd>
+    <a href="#panel2">Gameplay</a>
+    <div id="panel2" class="content">
+ <div class="row" style="padding:1em;">
         <button class="add turn small button success small-2 columns">Add Turn</button>
 
         <div class="small-4 columns small-offset-6">
@@ -88,14 +62,13 @@ Natalie</textarea>
         <div class="clear_both"></div>
       </div>
 
-      </div>
+    </div>
+  </dd>
 
-    </section>
+  <dd>
+    <a href="#panel3">Game Stats</a>
+    <div id="panel3" class="content">
 
-    <section class="section" id="stats">
-      <p class="title" data-section-title><a href="#panel3">Stats</a></p>
-      <div class="content" data-section-content>
-        <div class="stats row" style="text-align:center;">
           <table class="columns">
             <thead>
               <tr>
@@ -127,13 +100,15 @@ Natalie</textarea>
             </tr>
             </tbody>
           </table>
-        </div>
-      </div>
-    </section>
 
-  </div>
+    </div>
+  </dd>
+</dl>
+
 </form>
 </div>
+
+
 <div id="templates">
 <fieldset class="turn">
   <legend>Turn 0</legend>
@@ -162,8 +137,7 @@ Natalie</textarea>
 
       <tbody>
         <tr class="entry">
-          <td style="text-align:center;">&nbsp;&nbsp;</td>
-          <td><select class="players"><option></option></select></td>
+          <td colspan="2"><select class="players"><option></option></select></td>
           <td><select name="inkast" class="kubbs ten inkast"></select></td>
           <td><select name="rethrown" class="kubbs ten rethrown"></select></td>
           <td><select name="penalty" class="kubbs ten penalty"></select></td>
@@ -195,8 +169,8 @@ Natalie</textarea>
                 <option></option>
                 <option value="z">Illegal Throw</option>
                 <option>--</option>
-                <option value="k">King Shot</option>
-                <option value="=">Missed King Shot</option>
+                <option value="k">King</option>
+                <option value="=">Missed King</option>
                 <option value="g">Resigned Game</option>
               </select>
           </td>
@@ -208,35 +182,20 @@ Natalie</textarea>
 
   </div>
   </fieldset>
-</div>
-<script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-  '.js><\/script>')
-  </script>
 
-  <script src="js/foundation.min.js"></script>
-  <script src="js/foundation/foundation.alerts.js"></script>
-  <script src="js/foundation/foundation.clearing.js"></script>
-  <script src="js/foundation/foundation.cookie.js"></script>
-  <script src="js/foundation/foundation.dropdown.js"></script>
-  <script src="js/foundation/foundation.forms.js"></script>
-  <script src="js/foundation/foundation.section.js"></script>
-  <script src='js/vendor/fastclick.js'></script>
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/foundation.min.js"></script>
+  <script src="/js/foundation/foundation.abide.js"></script>
+  <script src="/js/foundation/foundation.alert.js"></script>
+  <script src="/js/foundation/foundation.dropdown.js"></script>
+  <script src="/js/foundation/foundation.offcanvas.js"></script>
+  <script src="/js/foundation/foundation.tab.js"></script>
+  <script src='/js/vendor/fastclick.js'></script>
 
   <script>
-$(document).foundation();
+ $(document).foundation();
 
 $(document).ready(function() {
-    $('form#signin').submit(function(e){
-      alert('hi');
-      var login = $('#lgname').val();
-      var pass = $('#lgpassword').val();
-
-      wiki_auth(login, pass, 'http://wiki.planetkubb.com/w');
-      e.preventDefault();
-    });
-
     window.addEventListener('load', function() {
       FastClick.attach(document.body);
     }, false);
@@ -266,20 +225,20 @@ $(document).ready(function() {
 
     // Set up the opening turns
     for (var i = 1; i < 4; i++) {
-      $('#templates fieldset.turn').clone().insertBefore('#gameplay .content button.add.turn');
-      $('#gameplay .content fieldset.turn legend:last').text('Turn ' + i);
+      $('#templates fieldset.turn').clone().insertBefore('.content button.add.turn');
+      $('.content fieldset.turn legend:last').text('Turn ' + i);
     }
 
-    $('#gameplay .content fieldset.turn:first').addClass('opening');
+    $('.content fieldset.turn:first').addClass('opening');
     $('.opening .advantage').hide();
     $('.opening .inkast').hide();
     $('.opening .kubbs.ten').hide();
-    $('#gameplay .content fieldset.turn button:last').show();
+    $('.content fieldset.turn button:last').show();
 
     $('button.add.turn').bind('click', function(e){
-      $('#gameplay button.add.inkast').hide();
+      $('button.add.inkast').hide();
       var turn = $('#templates fieldset.turn').clone().insertBefore($(this));
-      $('#gameplay fieldset.turn legend:last').text('Turn ' + $('#gameplay .content fieldset.turn').length);
+      $('fieldset.turn legend:last').text('Turn ' + $('.content fieldset.turn').length);
       e.preventDefault();
     });
 
@@ -298,7 +257,7 @@ $(document).ready(function() {
       $('form').submit();
 
       $.ajax({
-        url: "http://wiki.garrickvanburen.com/w/api.php",
+        url: "http://kubbscore.com/",
         type: 'POST',
         xhrFields: { withCredentials: true },
         data: gamedata,
@@ -342,7 +301,7 @@ $(document).ready(function() {
       gamedata += "{{Game player|Team=" + answering_team + "|Player=" + this + "|Initial=" + this +"}}"
     });
 
-    $('#gameplay fieldset.turn').each(function() {
+    $('fieldset.turn').each(function() {
       gamedata += "{{Game turn";
 
       if ( $(this).find('select.advantage').val() != "0" ) {
@@ -439,40 +398,5 @@ $(document).ready(function() {
     $('#location').val(position.coords.latitude + "," + position.coords.longitude);
   }
 
-  function wiki_auth(login, pass, ref){
-        $.post('http://wiki.garrickvanburen.com/w/api.php?action=login&lgname=' + login + '&lgpassword=' + pass + '&format=json', function(data) {
-
-          console.log(data);
-
-          $.cookie(data.login.cookieprefix, data.login.session_id);
-
-        if(data.login.result == 'NeedToken') {
-            $.post('http://wiki.garrickvanburen.com/w/api.php?action=login&lgname=' + login + '&lgpassword=' + pass + '&lgtoken=' + data.login.token + '&format=json',function(data) {
-
-                console.log(data);
-
-                if(!data.error){
-                   if (data.login.result == "Success") {
-                        console.log(data.login.result);
-                       $('form#game').prepend("<input type='hidden' name='lgtoken' value='" + + "' />");
-                       $('form#signin').slideUp('fast');
-                       $('form#game').slideDown('fast');
-                   } else {
-                        console.log('Result: '+ data.login.result);
-                   }
-                } else {
-                   console.log('Error: ' + data.error);
-                }
-            });
-        } else {
-            console.log('Result: ' + data.login.result);
-        }
-        if(data.error) {
-            console.log('Error: ' + data.error);
-        }
-    });
-}
 
 </script>
-</body>
-</html>

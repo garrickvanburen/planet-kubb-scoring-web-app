@@ -1,0 +1,374 @@
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 15:59:32] "GET / " 200 16187 0.0352
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 15:59:34] "GET /manifest.appcache " 404 453 0.0018
+127.0.0.1 - - [06/Feb/2014 16:00:30] "GET / " 200 16145 0.0114
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:00:32] "GET /manifest.appcache " 404 453 0.0016
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:01:11] "GET / " 200 16019 0.0107
+127.0.0.1 - - [06/Feb/2014 16:01:12] "GET /manifest.appcache " 404 453 0.0017
+127.0.0.1 - - [06/Feb/2014 16:01:28] "GET / " 200 16032 0.0124
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:01:30] "GET /manifest.appcache " 404 453 0.0018
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:03:52] "GET / " 200 16032 0.0123
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:03:54] "GET /js/foundation/foundation.alerts.js " 404 470 0.0026
+127.0.0.1 - - [06/Feb/2014 16:03:54] "GET /manifest.appcache " 404 453 0.0018
+127.0.0.1 - - [06/Feb/2014 16:03:55] "GET /js/foundation/foundation.cookie.js " 404 470 0.0024
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:03:55] "GET /js/foundation/foundation.forms.js " 404 469 0.0018
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:03:56] "GET /js/foundation/foundation.section.js " 404 471 0.0017
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:05:47] "GET / " 200 16033 0.0135
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:05:49] "GET /manifest.appcache " 404 453 0.0027
+127.0.0.1 - - [06/Feb/2014 16:05:49] "GET /js/foundation/foundation.alerts.js " 404 470 0.0027
+127.0.0.1 - - [06/Feb/2014 16:05:51] "GET /js/foundation/foundation.forms.js " 404 469 0.0028
+127.0.0.1 - - [06/Feb/2014 16:05:51] "GET /js/foundation/foundation.cookie.js " 404 470 0.0025
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:05:52] "GET /js/foundation/foundation.section.js " 404 471 0.0030
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:14:44] "GET / " 200 15678 0.0112
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:14:46] "GET /js/foundation/foundation.alerts.js " 404 470 0.0020
+127.0.0.1 - - [06/Feb/2014 16:14:46] "GET /manifest.appcache " 404 453 0.0031
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:14:47] "GET /js/foundation/foundation.cookie.js " 404 470 0.0029
+127.0.0.1 - - [06/Feb/2014 16:14:47] "GET /js/foundation/foundation.forms.js " 404 469 0.0027
+127.0.0.1 - - [06/Feb/2014 16:14:48] "GET /js/foundation/foundation.section.js " 404 471 0.0021
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:17:36] "GET / " 200 15598 0.0160
+127.0.0.1 - - [06/Feb/2014 16:17:38] "GET /js/foundation/foundation.alerts.js " 404 470 0.0103
+127.0.0.1 - - [06/Feb/2014 16:17:38] "GET /js/foundation/foundation.cookie.js " 404 470 0.0037
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:17:43] "GET /js/foundation/foundation.section.js " 404 471 0.0098
+127.0.0.1 - - [06/Feb/2014 16:17:43] "GET /js/foundation/foundation.forms.js " 404 469 0.0038
+127.0.0.1 - - [06/Feb/2014 16:17:45] "GET /manifest.appcache " 404 453 0.0033
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:19:45] "GET / " 200 15522 0.0203
+127.0.0.1 - - [06/Feb/2014 16:19:47] "GET /manifest.appcache " 404 453 0.0028
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:20:50] "GET / " 200 15446 0.0127
+127.0.0.1 - - [06/Feb/2014 16:20:52] "GET /manifest.appcache " 404 453 0.0057
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:23:56] "GET / " 200 15518 0.0125
+127.0.0.1 - - [06/Feb/2014 16:23:57] "GET /manifest.appcache " 404 453 0.0029
+127.0.0.1 - - [06/Feb/2014 16:25:59] "GET / " 200 15471 0.0142
+127.0.0.1 - - [06/Feb/2014 16:26:01] "GET /manifest.appcache " 404 453 0.0030
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:27:46] "GET / " 200 15531 0.0106
+127.0.0.1 - - [06/Feb/2014 16:27:47] "GET /manifest.appcache " 404 453 0.0047
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:28:24] "GET / " 200 15517 0.0107
+127.0.0.1 - - [06/Feb/2014 16:28:25] "GET /manifest.appcache " 404 453 0.0018
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:30:26] "GET / " 200 15516 0.0138
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:30:28] "GET /manifest.appcache " 404 453 0.0018
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:31:51] "GET / " 200 13969 0.0097
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:31:52] "GET /manifest.appcache " 404 453 0.0017
+127.0.0.1 - - [06/Feb/2014 16:33:18] "GET / " 200 13969 0.0126
+127.0.0.1 - - [06/Feb/2014 16:33:20] "GET /manifest.appcache " 404 453 0.0023
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:33:43] "GET / " 200 13969 0.0104
+127.0.0.1 - - [06/Feb/2014 16:33:44] "GET /manifest.appcache " 404 453 0.0030
+127.0.0.1 - - [06/Feb/2014 16:34:05] "GET / " 200 13969 0.0100
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:34:07] "GET /manifest.appcache " 404 453 0.0020
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:34:31] "GET / " 200 13969 0.0107
+127.0.0.1 - - [06/Feb/2014 16:34:33] "GET /manifest.appcache " 404 453 0.0028
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:34:45] "GET / " 200 13969 0.0089
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:34:47] "GET /manifest.appcache " 404 453 0.0021
+127.0.0.1 - - [06/Feb/2014 16:36:40] "GET / " 200 13969 0.0107
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:36:42] "GET /manifest.appcache " 404 453 0.0029
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:37:00] "GET / " 200 13969 0.0125
+127.0.0.1 - - [06/Feb/2014 16:37:02] "GET /manifest.appcache " 404 453 0.0029
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:37:36] "GET / " 200 13969 0.0108
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:37:37] "GET /manifest.appcache " 404 453 0.0020
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:38:45] "GET / " 200 13977 0.0107
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:38:46] "GET /manifest.appcache " 404 453 0.0019
+127.0.0.1 - - [06/Feb/2014 16:39:04] "GET / " 200 13986 0.0116
+127.0.0.1 - - [06/Feb/2014 16:39:05] "GET /manifest.appcache " 404 453 0.0020
+127.0.0.1 - - [06/Feb/2014 16:39:24] "GET / " 200 13905 0.0094
+/Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `eof?': closed stream (IOError)
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:87:in `block (2 levels) in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `each'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:86:in `block in start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `loop'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:66:in `start'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/lib/nack/server.rb:13:in `run'
+	from /Users/garrick/Library/Application Support/Pow/Versions/0.4.1/node_modules/nack/bin/nack_worker:4:in `<main>'
+127.0.0.1 - - [06/Feb/2014 16:39:26] "GET /manifest.appcache " 404 453 0.0020

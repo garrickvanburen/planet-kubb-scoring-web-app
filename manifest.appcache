@@ -18,7 +18,7 @@ css/fonts/Montserrat-PK/MontserratPK-Regular.ttf
 css/fonts/Montserrat-PK/MontserratPK-Bold.ttf
 
 
-js/vendor/zepto.js
+js/vendor/jquery.js
 js/vendor/custom.modernizr.js
 js/vendor/fastclick.js
 

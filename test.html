@@ -1,0 +1,48 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+
+  <script type="text/javascript" src="js/vendor/zepto.js"></script>
+  <script type="text/javascript" src="js/foundation.min.js"></script>
+  <script type="text/javascript" src="js/vendor/mediawiki.js"></script>
+  <script type="text/javascript" src="js/foundation/foundation.cookie.js"></script>
+  <script>
+
+  function wiki_auth(login, pass, ref){
+      $.post(ref + '/w/api.php?action=login&lgname=' + login + '&lgpassword=' + pass + '&format=json', function(data) {
+
+        $.cookie(data.login.cookieprefix, data.login.session_id);
+
+        console.log($.cookie(data.login.cookieprefix));
+
+          if(data.login.result == 'NeedToken') {
+
+            $.post(ref + '/w/api.php?action=login&lgname=' + login + '&lgpassword=' + pass + '&lgtoken='+data.login.token+'&format=json', function(data) {
+                console.log(data);
+                if(!data.error){
+                   if (data.login.result == "Success") {
+                        document.location.href=ref;
+                   } else {
+                        console.log('Result: '+ data.login.result);
+                   }
+                } else {
+                   console.log('Error: ' + data.error);
+                }
+
+            });
+          } else {
+              console.log('Result: ' + data.login.result);
+          }
+
+          if(data.error) { console.log('Error: ' + data.error); }
+      });
+  }
+
+  $(document).foundation();
+  $(document).ready(function(){ wiki_auth('garrick', 'punts62Gaul', 'http://wiki.garrickvanburen.com/'); });
+  </script>
+
+  </body>
+</html>
